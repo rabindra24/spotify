@@ -4,7 +4,11 @@ import React from "react";
 import ReactAudioPlayer from "react-audio-player";
 import { useMusicStore } from "@/counterStore";
 import { Button } from "./ui/button";
+import { supabase } from "@/lib/supabase";
 const MusicPlayer = () => {
+  const { data } = supabase.storage.from("songs").getPublicUrl("son/song.mp3");
+
+  console.log(data.publicUrl);
   const {
     title,
     imageUrl,
@@ -51,8 +55,8 @@ const MusicPlayer = () => {
         </div>
       </div>
       <ReactAudioPlayer
-        // src={song}
-        src="https://sephsziqgvkgevxyikmf.supabase.co/storage/v1/object/sign/songs/Diljit%20Dosanjh_%20Born%20To%20Shine%20(Official%20Music%20Video)%20G.O.A.T.mp3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb25ncy9EaWxqaXQgRG9zYW5qaF8gQm9ybiBUbyBTaGluZSAoT2ZmaWNpYWwgTXVzaWMgVmlkZW8pIEcuTy5BLlQubXAzIiwiaWF0IjoxNzI2Mjk0NTAyLCJleHAiOjIwNDE2NTQ1MDJ9.S4P3fluli9PImQGST3DYzsnZ70HkyyZNcrlCU5n7L5Y&t=2024-09-14T06%3A15%3A02.157Z"
+        src={data.publicUrl}
+        // src="https://sephsziqgvkgevxyikmf.supabase.co/storage/v1/object/sign/songs/Diljit%20Dosanjh_%20Born%20To%20Shine%20(Official%20Music%20Video)%20G.O.A.T.mp3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb25ncy9EaWxqaXQgRG9zYW5qaF8gQm9ybiBUbyBTaGluZSAoT2ZmaWNpYWwgTXVzaWMgVmlkZW8pIEcuTy5BLlQubXAzIiwiaWF0IjoxNzI2Mjk0NTAyLCJleHAiOjIwNDE2NTQ1MDJ9.S4P3fluli9PImQGST3DYzsnZ70HkyyZNcrlCU5n7L5Y&t=2024-09-14T06%3A15%3A02.157Z"
         controls
         autoPlay
         style={{ background: "transparent" }}

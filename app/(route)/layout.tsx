@@ -1,3 +1,4 @@
+import AllSongs from "@/components/AllSongs";
 import MusicPlayer from "@/components/MusicPlayer";
 import Navbar from "@/components/Navbar";
 import PlaylistSection from "@/components/PlaylistSection";
@@ -18,6 +19,7 @@ const layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
             {children}
           </div>
           <MusicPlayer />
+          <AllSongs />
         </div>
       </div>
     </main>
