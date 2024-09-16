@@ -16,7 +16,7 @@ const PrimiumPlaneCard = ({ data }: { data: PremiumPlansTypes }) => {
           {data.planType}
         </h1>
         {Object.entries(data.features).map(([key, value]) => (
-          <p className="flex items-center  mb-2">
+          <p className="flex items-center  mb-2" key={key}>
             <span className="w-4 h-4 mr-2 inline-flex items-center justify-center rounded-full flex-shrink-0">
               <svg
                 fill="none"
@@ -51,7 +51,7 @@ const PrimiumPlaneCard = ({ data }: { data: PremiumPlansTypes }) => {
           </svg> */}
         </Button>
         <p className="text-xs  mt-3">
-          Literally you probably haven't heard of them jean shorts.
+          Literally you probably haven&apos;t heard of them jean shorts.
         </p>
       </div>
     </div>
