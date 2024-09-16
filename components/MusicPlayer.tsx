@@ -23,7 +23,7 @@ const MusicPlayer = () => {
     updateMusicInfo(newTitle, newImageUrl, newSong);
   };
 
-  if(!song){
+  if (!song) {
     return;
   }
   return (
@@ -49,10 +49,10 @@ const MusicPlayer = () => {
           <h3>{title}</h3>
           {/* <p>{author}</p> */}
         </div>
-      </div> 
+      </div>
       <ReactAudioPlayer
         // src={song}
-        src='https://sephsziqgvkgevxyikmf.supabase.co/storage/v1/object/sign/songs/Diljit%20Dosanjh_%20Born%20To%20Shine%20(Official%20Music%20Video)%20G.O.A.T.mp3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb25ncy9EaWxqaXQgRG9zYW5qaF8gQm9ybiBUbyBTaGluZSAoT2ZmaWNpYWwgTXVzaWMgVmlkZW8pIEcuTy5BLlQubXAzIiwiaWF0IjoxNzI2Mjk0NTAyLCJleHAiOjIwNDE2NTQ1MDJ9.S4P3fluli9PImQGST3DYzsnZ70HkyyZNcrlCU5n7L5Y&t=2024-09-14T06%3A15%3A02.157Z'
+        src="https://sephsziqgvkgevxyikmf.supabase.co/storage/v1/object/sign/songs/Diljit%20Dosanjh_%20Born%20To%20Shine%20(Official%20Music%20Video)%20G.O.A.T.mp3?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJzb25ncy9EaWxqaXQgRG9zYW5qaF8gQm9ybiBUbyBTaGluZSAoT2ZmaWNpYWwgTXVzaWMgVmlkZW8pIEcuTy5BLlQubXAzIiwiaWF0IjoxNzI2Mjk0NTAyLCJleHAiOjIwNDE2NTQ1MDJ9.S4P3fluli9PImQGST3DYzsnZ70HkyyZNcrlCU5n7L5Y&t=2024-09-14T06%3A15%3A02.157Z"
         controls
         autoPlay
         style={{ background: "transparent" }}
